@@ -1,4 +1,4 @@
-package br.com.basis.sgt3.entities;
+package br.com.basis.sgt3.domain;
 
 
 import lombok.Getter;
@@ -33,8 +33,8 @@ public class Tarefa {
     @Column(name="status")
     private String status;
 
-//   @JoinColumn(name = "id_tipo")
-//    @ManyToOne
-//    private TipoTarefa tipoTarefa;
+   @JoinColumn(name = "id_tipo")
+  @ManyToOne
+  private TipoTarefa tipoTarefa;
 
 }

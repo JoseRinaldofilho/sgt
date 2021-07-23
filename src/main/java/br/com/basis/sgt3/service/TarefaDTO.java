@@ -1,6 +1,5 @@
-package br.com.basis.sgt3.entities;
+package br.com.basis.sgt3.service;
 
-import lombok.AllArgsConstructor;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

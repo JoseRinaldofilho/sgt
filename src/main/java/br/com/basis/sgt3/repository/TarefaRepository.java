@@ -1,5 +1,6 @@
-package br.com.basis.sgt3.entities;
+package br.com.basis.sgt3.repository;
 
+import br.com.basis.sgt3.domain.Tarefa;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

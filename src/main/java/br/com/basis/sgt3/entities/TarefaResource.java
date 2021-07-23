@@ -1,5 +1,7 @@
 package br.com.basis.sgt3.entities;
 
+import br.com.basis.sgt3.domain.Tarefa;
+import br.com.basis.sgt3.repository.TarefaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

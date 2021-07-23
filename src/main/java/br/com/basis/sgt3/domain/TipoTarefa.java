@@ -1,4 +1,4 @@
-package br.com.basis.sgt3.entities;
+package br.com.basis.sgt3.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
