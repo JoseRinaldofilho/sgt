@@ -2,6 +2,7 @@ package br.com.basis.sgt3.domain;
 
 
 import lombok.Getter;
+import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.Column;
@@ -12,6 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "tarefa")
@@ -27,14 +29,13 @@ public class Tarefa {
     @Column(name = "titulo")
     private String titulo;
 
-    @Column(name = "descricao")
-    private String descricao;
+    @Column(name = "dt")
+    private LocalDate dt;
 
-    @Column(name="status")
-    private String status;
+    @JoinColumn(name = "id_tipo")
+    @ManyToOne
+    private TipoTarefa tipoTarefa;
 
-   @JoinColumn(name = "id_tipo")
-  @ManyToOne
-  private TipoTarefa tipoTarefa;
+
 
 }

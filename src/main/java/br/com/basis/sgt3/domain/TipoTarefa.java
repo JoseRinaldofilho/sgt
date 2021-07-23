@@ -20,4 +20,3 @@ public class TipoTarefa {
     private String descricao;
 
 }
-

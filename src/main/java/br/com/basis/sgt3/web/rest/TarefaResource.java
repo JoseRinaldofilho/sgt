@@ -1,6 +1,7 @@
-package br.com.basis.sgt3.entities;
+package br.com.basis.sgt3.web.rest;
 
 import br.com.basis.sgt3.domain.Tarefa;
+import br.com.basis.sgt3.service.error.TarefaNaoEncontradaException;
 import br.com.basis.sgt3.repository.TarefaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
