@@ -8,6 +8,7 @@ class Sgt3ApplicationTests {
 
 	@Test
 	void contextLoads() {
+
 	}
 
 }
