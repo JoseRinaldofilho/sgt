@@ -1,15 +1,21 @@
 package br.com.basis.sgt3.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.time.LocalDate;
+
 
 @Entity
-
-public class TipoTarefa {
+@Getter
+@Setter
+public class Comentario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,5 +24,8 @@ public class TipoTarefa {
 
     @Column(name = "descricao")
     private String descricao;
+
+    @Column(name = "data_referencia")
+    private LocalDate dataReferencia;
 
 }

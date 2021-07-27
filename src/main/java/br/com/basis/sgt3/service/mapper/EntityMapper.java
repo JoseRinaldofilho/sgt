@@ -1,5 +1,4 @@
 package br.com.basis.sgt3.service.mapper;
-
 import java.util.List;
 
 /**
