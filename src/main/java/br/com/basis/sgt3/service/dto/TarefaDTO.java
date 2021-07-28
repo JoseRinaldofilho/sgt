@@ -19,6 +19,10 @@ public class TarefaDTO {
     private Long id;
     private String titulo;
     private String descricao;
+    private String status;
+    private LocalDate dtInicio;
+    private LocalDate dtTerminoPrevisto;
+    private LocalDate dtTerminoEfetivo;
     private List<ComentarioDTO> comentarios;
 
 }

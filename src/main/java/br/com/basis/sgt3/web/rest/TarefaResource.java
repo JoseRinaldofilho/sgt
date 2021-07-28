@@ -26,11 +26,6 @@ public class TarefaResource {
         this.tarefaService = tarefaService;
     }
 
-    /**
-     * Busca todos os títulos através
-     * @param titulo
-     * @return
-     */
     @GetMapping
     public ResponseEntity<List<TarefaDTO>> obterTodos(@RequestParam("titulo") String titulo) {
         return new ResponseEntity<>(tarefaService.obterTodos(titulo), HttpStatus.OK);
