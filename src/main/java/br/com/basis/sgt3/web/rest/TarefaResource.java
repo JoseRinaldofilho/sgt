@@ -3,6 +3,8 @@ package br.com.basis.sgt3.web.rest;
 import br.com.basis.sgt3.service.TarefaService;
 import br.com.basis.sgt3.service.dto.TarefaDTO;
 import lombok.RequiredArgsConstructor;
+import net.bytebuddy.asm.Advice;
+import org.springframework.data.repository.query.Param;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -27,7 +29,7 @@ public class TarefaResource {
     }
 
     @GetMapping
-    public ResponseEntity<List<TarefaDTO>> obterTodos(@RequestParam("titulo") String titulo) {
+    public ResponseEntity<List<TarefaDTO>>obterTodos(@RequestParam(value = "titulo", required = false) String titulo) {
         return new ResponseEntity<>(tarefaService.obterTodos(titulo), HttpStatus.OK);
     }
 
@@ -46,5 +48,4 @@ public class TarefaResource {
         tarefaService.deletarPorId(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
-
 }

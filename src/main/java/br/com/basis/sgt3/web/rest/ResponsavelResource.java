@@ -18,8 +18,8 @@ public class ResponsavelResource {
     }
 
     @GetMapping
-    public ResponseEntity<List<ResponsavelDTO>> obterTodos(@RequestParam("titulo") String titulo) {
-        return new ResponseEntity<>(responsavelService.obterTodos(titulo), HttpStatus.OK);
+    public ResponseEntity<List<ResponsavelDTO>> obterTodos(@RequestParam(value = "nome", required = false) String nome) {
+        return new ResponseEntity<>(responsavelService.obterTodos(nome), HttpStatus.OK);
     }
 
     @PostMapping

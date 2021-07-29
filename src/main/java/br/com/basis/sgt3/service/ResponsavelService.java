@@ -21,12 +21,10 @@ public class ResponsavelService {
         this.responsavelMapper = responsavelMapper;
     }
 
-    public List<ResponsavelDTO> obterTodos(String nome) {
-
+    public List<ResponsavelDTO>obterTodos(String nome) {
         if (nome != null && !nome.isEmpty()) {
             return responsavelMapper.toDto(responsavelRepository.encontarTodosPorNome(nome));
         }
-
         return responsavelMapper.toDto(responsavelRepository.findAll());
     }
 

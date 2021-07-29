@@ -24,5 +24,4 @@ public class TarefaDTO {
     private LocalDate dtTerminoPrevisto;
     private LocalDate dtTerminoEfetivo;
     private List<ComentarioDTO> comentarios;
-
 }

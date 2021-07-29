@@ -23,11 +23,9 @@ public class TarefaService {
     }
 
     public List<TarefaDTO> obterTodos(String titulo) {
-
         if (titulo != null && !titulo.isEmpty()) {
             return tarefaMapper.toDto(tarefaRepository.encontarTodosPorTitulo(titulo));
         }
-
         return tarefaMapper.toDto(tarefaRepository.findAll());
     }
 
