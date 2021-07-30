@@ -1,5 +1,4 @@
 package br.com.basis.sgt3.domain;
-
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,6 +12,7 @@ import java.time.LocalDate;
 
 
 @Entity
+@Table(name = "comentario")
 @Getter
 @Setter
 public class Comentario {

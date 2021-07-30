@@ -14,7 +14,7 @@
         </createTable>
     </changeSet>
 
-    <changeSet id="202107211410-1" author="flavio.junior">
+    <changeSet id="202107211410-1" author="jose.vasconcelos">
         <createTable tableName="tp_tarefa">
             <column name="id" type="bigint">
                 <constraints primaryKey="true"/>

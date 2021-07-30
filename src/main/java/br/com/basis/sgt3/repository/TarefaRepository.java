@@ -1,6 +1,7 @@
 package br.com.basis.sgt3.repository;
 
-//import  br.com.basis.sgt.domain.Tarefa;
+
+
 import br.com.basis.sgt3.domain.Tarefa;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

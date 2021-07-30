@@ -12,29 +12,27 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import java.time.LocalDate;
 import java.util.List;
 
-
 @Entity
-@Table(name = "tarefa")
+@Table(name = "responsavel")
 @Getter
 @Setter
-public class Tarefa {
+public class Responsavel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "titulo")
-    private String titulo;
+    @Column(name = "nome")
+    private String nome;
 
-    @JoinColumn(name = "id_tipo")
-    @ManyToOne
-    private TipoTarefa tipoTarefa;
+    @Column(name = "email")
+    private String email;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_tarefa")
-    List<Comentario> comentarios;
 
+    @Column(name = "CPF")
+    private String cpf;
 }

@@ -1,6 +1,7 @@
 package br.com.basis.sgt3.service;
 
 
+
 import br.com.basis.sgt3.domain.Tarefa;
 import br.com.basis.sgt3.repository.TarefaRepository;
 import br.com.basis.sgt3.service.dto.TarefaDTO;
