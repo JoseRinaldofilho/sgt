@@ -13,6 +13,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.util.List;
+import java.util.Objects;
 
 
 @Entity
@@ -37,4 +38,19 @@ public class Tarefa {
     @JoinColumn(name = "id_tarefa")
     List<Comentario> comentarios;
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Tarefa tarefa = (Tarefa) o;
+        return Objects.equals(id, tarefa.id) &&
+                Objects.equals(titulo, tarefa.titulo) &&
+                Objects.equals(tipoTarefa, tarefa.tipoTarefa) &&
+                Objects.equals(comentarios, tarefa.comentarios);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, titulo, tipoTarefa, comentarios);
+    }
 }
