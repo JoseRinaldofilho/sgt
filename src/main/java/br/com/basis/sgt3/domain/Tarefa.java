@@ -30,13 +30,57 @@ public class Tarefa {
     @Column(name = "titulo")
     private String titulo;
 
+   private String descricao;
+
     @JoinColumn(name = "id_tipo")
     @ManyToOne
     private TipoTarefa tipoTarefa;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public TipoTarefa getTipoTarefa() {
+        return tipoTarefa;
+    }
+
+    public void setTipoTarefa(TipoTarefa tipoTarefa) {
+        this.tipoTarefa = tipoTarefa;
+    }
+
+    public List<Comentario> getComentarios() {
+        return comentarios;
+    }
+
+    public void setComentarios(List<Comentario> comentarios) {
+        this.comentarios = comentarios;
+    }
+
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_tarefa")
     List<Comentario> comentarios;
+
+
 
     @Override
     public boolean equals(Object o) {

@@ -16,7 +16,7 @@
 
     <changeSet id="202107211410-1" author="jose.vasconcelos">
         <createTable tableName="tp_tarefa">
-            <column name="id" type="bigint">
+            <column name="id" type="bigint" autoIncrement="true">
                 <constraints primaryKey="true"/>
             </column>
             <column name="descricao" type="varchar(20)"/>
