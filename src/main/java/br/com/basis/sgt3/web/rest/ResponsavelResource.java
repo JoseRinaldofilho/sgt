@@ -7,10 +7,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/api/responsaveis")
 public class ResponsavelResource {
-
+    //class
     private final ResponsavelService responsavelService;
 
     public ResponsavelResource(ResponsavelService responsavelService) {
