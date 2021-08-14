@@ -11,7 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/responsaveis")
 public class ResponsavelResource {
-
+    //class
     private final ResponsavelService responsavelService;
 
     public ResponsavelResource(ResponsavelService responsavelService) {
